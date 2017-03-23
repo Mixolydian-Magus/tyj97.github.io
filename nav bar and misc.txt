@@ -1,0 +1,36 @@
+<nav>
+<table style="width:100%">
+  <tr>
+    <th style="font-family:helvetica;"> <a href="home.html">Home</a></th>
+    <th style="font-family:helvetica;"> <a href="comics.html">Comics</a></th>
+    <th style="font-family:helvetica;"> <a href="artists.html">Artists</a></th>
+    <th style="font-family:helvetica;"> <a href="genres.html">Genres</a></th>
+    <th style="font-family:helvetica;"> <a href="about.html">About</a></th>
+  </tr>
+</table>
+</nav>
+
+
+
+
+<h2 style="font-family:helvetica;">Date Created</h2>
+<p style="font-family:helvetica;">20 Spetember 2006</p>
+
+
+
+
+<h2 style="font-family:helvetica;">Genre</h2>
+<u1>
+<li style="font-family:helvetica;">Gag-A-Day</li>
+<li style="font-family:helvetica;">Parody</li>
+</u1>
+
+
+<h2 style="font-family:helvetica;">Date Created</h2>
+<p style="font-family:helvetica;">23 October 2002</p>
+
+<h2 style="font-family:helvetica;">Genre</h2>
+<u1>
+<li style="font-family:helvetica;">Slice of Life</p>
+<li style="font-family:helvetica;">Comedy</p>
+</u1>

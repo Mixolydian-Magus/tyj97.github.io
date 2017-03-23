@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Katie Tiedrich</title>
+</head>
+<body>
+
+<h1>Katie Tiedrich</h1>
+<img src="a587f2e8ac133146f6a0364e6a53ec3a" alt="Tiedrich_Image" style="width:900;height:600;">
+<p>Twitter: 
+<a href="https://twitter.com/katietiedrich">
+<img src="twitter-logo" alt="Twitter_Link" style="width:30;height:31;">
+</a>
+</p>
+
+<h2>Web Comic</h2>
+<p>Awkward Zombie</p>
+
+<h2>Date Created</h2>
+<p>20 Spetember 2006</p>
+
+<h2>Genre</h2>
+<p>Gag-A-Day</p>
+<p>Parody</p>
+
+<h2>About</h2>
+<p>Katie Tiedrich is a neat person from Wisconsin who makes a web coomic. Neat.</p>
