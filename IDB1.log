@@ -1,0 +1,89 @@
+commit d9abe11946399ce9370dda500eba7bb45863e9f9
+Author: LAPTOP-L055RSK6\tyj97 <tyler.y.james@gmail>
+Date:   Thu Mar 23 21:05:39 2017 -0500
+
+    Added rest of sources
+
+commit 8a2c5365230e40cdbd2cfdf05683099138df5a02
+Author: LAPTOP-HGEAA3SU\Evan <evan.noe@utexas.edu>
+Date:   Thu Mar 23 20:32:58 2017 -0500
+
+    Credits added - Evan
+
+commit e0187386bba52d0409ae2b045ea6797da3d13eda
+Author: LAPTOP-L055RSK6\tyj97 <tyler.y.james@gmail>
+Date:   Thu Mar 23 20:24:12 2017 -0500
+
+    sitewide implementation of random page button
+
+commit 62cf8ca14b689b717624b15bbdbbef5ff2c17c3e
+Author: LAPTOP-L055RSK6\tyj97 <tyler.y.james@gmail>
+Date:   Thu Mar 23 19:43:07 2017 -0500
+
+    reformatted splash page, attempted to add random page button
+
+commit 4a021071d9e0d01b62b5a96a7b47b76a60d25014
+Author: LAPTOP-HGEAA3SU\Evan <evan.noe@utexas.edu>
+Date:   Thu Mar 23 19:33:03 2017 -0500
+
+    Typo fix, and Splooooooooooosh Page added
+
+commit c1ce023a777f220421c354dcceaefd9a00b4b5b5
+Author: LAPTOP-L055RSK6\tyj97 <tyler.y.james@gmail>
+Date:   Thu Mar 23 18:34:36 2017 -0500
+
+    changed color of about page
+
+commit 3275a3eb7a6b3c6269c3922c59dbc08eafaa4bd6
+Author: LAPTOP-L055RSK6\tyj97 <tyler.y.james@gmail>
+Date:   Thu Mar 23 18:15:13 2017 -0500
+
+    more hyperlinks and proofreading
+
+commit a8d60534581f4053a9ba74575c3614db4354e35c
+Author: LAPTOP-L055RSK6\tyj97 <tyler.y.james@gmail>
+Date:   Thu Mar 23 17:58:21 2017 -0500
+
+    added hyperlinks and did proofreading
+
+commit d61935a33c4259a6e90742af10cca52e61a4b913
+Author: LAPTOP-HGEAA3SU\Evan <evan.noe@utexas.edu>
+Date:   Thu Mar 23 16:51:37 2017 -0500
+
+    Added About and Authors
+
+commit 030fe1c3159555857e70625bd48611eacf5bb9ee
+Author: LAPTOP-HGEAA3SU\Evan <evan.noe@utexas.edu>
+Date:   Thu Mar 23 16:13:18 2017 -0500
+
+    Genres and Comics page added
+
+commit 8876b1213882b9e6c9477e18db5ff826b02f981c
+Author: LAPTOP-L055RSK6\tyj97 <tyler.y.james@gmail>
+Date:   Thu Mar 23 16:09:31 2017 -0500
+
+    added ctrl+alt+del and awkward zombie
+
+commit e965dce77df100bd8e02be8590e19fcbcb9bec5f
+Author: LAPTOP-L055RSK6\tyj97 <tyler.y.james@gmail>
+Date:   Thu Mar 23 15:12:52 2017 -0500
+
+    reorganized folder, reformatted tim buckley/paranatural, added gag-a-day and parody
+
+commit 65e1f0d8ac8d2ecd4309ffb522c3982e5a895404
+Author: LAPTOP-HGEAA3SU\Evan <evan.noe@utexas.edu>
+Date:   Thu Mar 23 14:41:15 2017 -0500
+
+    Added HTML pages
+
+commit a6d05f0ff885d43c035aee39ee03c8c294d42da7
+Author: tyj97 <tyler.y.james@gmail.com>
+Date:   Wed Mar 22 01:55:01 2017 -0500
+
+    Added CNAME file for custom domain (wcdb.me)
+
+commit b3b4b16c02fca9eef9e444ce7067abad446d36aa
+Author: tyj97 <tyler.y.james@gmail.com>
+Date:   Tue Mar 21 01:46:26 2017 -0500
+
+    Initial commit
