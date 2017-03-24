@@ -33,3 +33,27 @@
 <p style="font-family:helvetica;">Tiedrich graduated from Stevens Institute of Technology in New York in 2014 with a degree in mechanical engineering. She currently resides in Wisconsin and works full-time designing spaceship parts.</p>
 <p style="font-family:helvetica;">In October 2016, Tiedrich married occasional co-writer and longtime boyfriend Norrin.</p>
 <p style="font-family:helvetica;">Tiedrich participates in Hourly Comic Day each year. Her two-panel hourly comics typically depict a day in her ordinary life.</p>
+
+<script>
+function randomLoad()
+{
+var myarray = new Array("action.html", "awkward zombie.html", "comedy.html", "Ctrl+Alt+Del.html", "fantasy.html", "gag-a-day.html", "Katie Tiedrich.html", "paranatural.html", "parody.html", "slice of life.html", "Tim Buckley.html", "Zack Morrison.html");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+<button name="random" value="Random Page" onClick="randomLoad()">Random Page</button></center>
+
+</body>
+</html>

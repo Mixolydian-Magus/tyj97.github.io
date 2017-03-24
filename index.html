@@ -36,9 +36,7 @@
 
 </p>
 
-<button type="button" onclick-"randomLoad()>Random Page</button>
-
-<script type="text/javascript">
+<script>
 function randomLoad()
 {
 var myarray = new Array("action.html", "awkward zombie.html", "comedy.html", "Ctrl+Alt+Del.html", "fantasy.html", "gag-a-day.html", "Katie Tiedrich.html", "paranatural.html", "parody.html", "slice of life.html", "Tim Buckley.html", "Zack Morrison.html");
@@ -55,6 +53,8 @@ else
 window.location = myarray[mynum];
 }
 }
-</script></center>
+</script>
+
+<button name="random" value="Random Page" onClick="randomLoad()">Random Page</button></center>
 </body>
 </html>

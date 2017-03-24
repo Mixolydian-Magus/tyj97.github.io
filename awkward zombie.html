@@ -30,5 +30,26 @@
 <h2 style="font-family:helvetica;">History</h2>
 <p style="font-family:helvetica;">The first page was posted on September 20, 2006 and has updated once weekly ever since. In 2015, it was cited by PC Gamer Magazine as one of the "best webcomics of 2015".</p>
 
+<script>
+function randomLoad()
+{
+var myarray = new Array("action.html", "awkward zombie.html", "comedy.html", "Ctrl+Alt+Del.html", "fantasy.html", "gag-a-day.html", "Katie Tiedrich.html", "paranatural.html", "parody.html", "slice of life.html", "Tim Buckley.html", "Zack Morrison.html");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+<button name="random" value="Random Page" onClick="randomLoad()">Random Page</button></center>
+
 </body>
 </html>

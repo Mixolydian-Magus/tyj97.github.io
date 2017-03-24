@@ -24,5 +24,26 @@
 <h2 style="font-family:helvetica;">Examples of slice of life comics</h2>
 <p style="font-family:helvetica;"><a href="Ctrl+Alt+Del.html"><i>Ctrl+Alt+Del</i></a> by <a href="Tim Buckley.html">Tim Buckley</a></p>
 
+<script>
+function randomLoad()
+{
+var myarray = new Array("action.html", "awkward zombie.html", "comedy.html", "Ctrl+Alt+Del.html", "fantasy.html", "gag-a-day.html", "Katie Tiedrich.html", "paranatural.html", "parody.html", "slice of life.html", "Tim Buckley.html", "Zack Morrison.html");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+<button name="random" value="Random Page" onClick="randomLoad()">Random Page</button></center>
+
 </body>
 </html>

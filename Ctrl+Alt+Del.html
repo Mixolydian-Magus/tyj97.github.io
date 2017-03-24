@@ -36,5 +36,26 @@
 <p style="font-family:helvetica;">The first page was posted on October 23, 2002. Updating 3 times a week since its inception, it is known for hardly ever missing an update.</p>
 <p style="font-family:helvetica;">The comic has drawn criticism over, among other things, its use of reused assets in its art, its dialogue-heavy writing, and poor blending of comedy and drama. CAD is cited by some as a negative example of the "two gamers on a couch" genre popularized by <i>Penny Arcade</i>.</p>
 
+<script>
+function randomLoad()
+{
+var myarray = new Array("action.html", "awkward zombie.html", "comedy.html", "Ctrl+Alt+Del.html", "fantasy.html", "gag-a-day.html", "Katie Tiedrich.html", "paranatural.html", "parody.html", "slice of life.html", "Tim Buckley.html", "Zack Morrison.html");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+<button name="random" value="Random Page" onClick="randomLoad()">Random Page</button></center>
+
 </body>
 </html>

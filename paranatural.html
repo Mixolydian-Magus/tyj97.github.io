@@ -34,5 +34,26 @@
 <h2 style="font-family:helvetica;">History</h2>
 <p style="font-family:helvetica;">The first page was posted on May 1st, 2011. The comic initially used a more rough-ink look before gradually evolving to a smoother style over time. The first 8 pages were black and white with minor color splashes in the backgrounds before page 9 made the permanent jump to full color. Updates are delayed by 1-2 weeks on a semi-frequent basis, but the comic has never experienced a long hiatus.</p>
 
+<script>
+function randomLoad()
+{
+var myarray = new Array("action.html", "awkward zombie.html", "comedy.html", "Ctrl+Alt+Del.html", "fantasy.html", "gag-a-day.html", "Katie Tiedrich.html", "paranatural.html", "parody.html", "slice of life.html", "Tim Buckley.html", "Zack Morrison.html");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+<button name="random" value="Random Page" onClick="randomLoad()">Random Page</button></center>
+
 </body>
 </html>
