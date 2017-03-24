@@ -34,3 +34,16 @@
 <li style="font-family:helvetica;">Slice of Life</p>
 <li style="font-family:helvetica;">Comedy</p>
 </u1>
+
+
+<a href="genres.html">
+<img src="comic splash 0.jpg" alt="Genres_link" style="width:626;height:626;">
+</a>
+
+<a href="authors.html">
+<img src="comic splash 0.jpg" alt="Authors_link" style="width:626;height:395;">
+</a>
+
+<a href="comics.html">
+<img src="comic splash 0.jpg" alt="Comics_link" style="width:626;height:201;">
+</a>
