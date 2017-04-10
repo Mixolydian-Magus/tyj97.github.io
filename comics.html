@@ -28,47 +28,47 @@
 <h1 >Comics</h1>
 
 <center>
-<table border="1" style="width:99%">
+<table border="1" style="width:99%" id="comicsTable">
   <tr>
-    <th >Name</th>
-    <th >Author</th>
-    <th >Genre</th>
-    <th >First Published</th>
-    <th >Number of Strips</th>
+    <th onclick="sortComics(0)">Name</th>
+    <th onclick="sortComics(1)">Author</th>
+    <th onclick="sortComics(2)">Genre</th>
+    <th onclick="sortComics(3)">First Published</th>
+    <th onclick="sortComics(4)">Number of Strips</th>
   </tr>
 
   <tr>
-    <th ><a href="awkward zombie.html">Awkward Zombie</a></th>
-    <th ><a href="Katie Tiedrich.html">Katie Tiedrich</a></th>
-    <th >
+    <td><a href="awkward zombie.html">Awkward Zombie</a></td>
+    <td><a href="Katie Tiedrich.html">Katie Tiedrich</a></td>
+    <td>
 <p><a href="gag-a-day.html">Gag-a-Day</a></p>
 <p><a href="comedy.html">Comedy</a></p>
-<p><a href="parody.html">Parody</a></p></th>
-    <th >20 Spetember 2006</th>
-    <th >502</th>
+<p><a href="parody.html">Parody</a></p></td>
+    <td>20 Spetember 2006</td>
+    <td>502</td>
   </tr>
 
   <tr>
-    <th ><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></th>
-    <th ><a href="Tim Buckley.html">Tim Buckley</a></th>
-    <th >
+    <td><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></td>
+    <td><a href="Tim Buckley.html">Tim Buckley</a></td>
+    <td>
 <p><a href="comedy.html">Comedy</a></p>
 <p><a href="gag-a-day.html">Gag-a-Day</a></p>
 <p><a href="slice of life.html">Slice of Life</a></p>
-<p><a href="parody.html">Parody</a></p></th>
-    <th >23 October 2002</th>
-    <th >2,262</th>
+<p><a href="parody.html">Parody</a></p></td>
+    <td>23 October 2002</td>
+    <td>2,262</td>
   </tr>
 
   <tr>
-    <th ><a href="paranatural.html">Paranatural</a></th>
-    <th ><a href="Zack Morrison.html">Zack Morrison</a></th>
-    <th >
+    <td><a href="paranatural.html">Paranatural</a></td>
+    <td><a href="Zack Morrison.html">Zack Morrison</a></td>
+    <td>
 <p><a href="comedy.html">Comedy</a></p>
 <p><a href="fantasy.html">Fantasy</a></p>
-<p><a href="action.html">Action</a></p></th>
-    <th >1 May2001</th>
-    <th >393</th>
+<p><a href="action.html">Action</a></p></td>
+    <td>1 May 2001</td>
+    <td>393</td>
   </tr>
 
 </table>
@@ -90,6 +90,45 @@ else
 {
 window.location = myarray[mynum];
 }
+}
+</script>
+
+<script>
+function sortComics(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("comicsTable");
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
 }
 </script>
 

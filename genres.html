@@ -28,66 +28,66 @@
 <h1 >Genres</h1>
 
 <center>
-<table border="1" style="width:99%">
+<table border="1" style="width:99%" id="genresTable">
   <tr>
-    <th >Name</th>
-    <th >Brief Description</th>
-    <th >Frequently Paired With</th>
-    <th >Example Comics</th>
-    <th >Example Authors</th>
+    <th onclick="sortGenres(0)">Name</th>
+    <th onclick="sortGenres(1)">Brief Description</th>
+    <th onclick="sortGenres(2)">Frequently Paired With</th>
+    <th onclick="sortGenres(3)">Example Comics</th>
+    <th onclick="sortGenres(4)">Example Authors</th>
   </tr>
 
   <tr>
-    <th ><a href="action.html">Action</a></th>
-    <th >Heavily focuses on combat and strife.</th>
-    <th >
-<p>Drama</p> <p><a href="comedy.html">Comedy</a></p> </th>
-    <th ><a href="paranatural.html">Paranatural</a></th>
-    <th ><a href="Zack Morrison.html">Zack Morrison</a></th>
+    <td><a href="action.html">Action</a></td>
+    <td>Heavily focuses on combat and strife.</td>
+    <td>
+<p>Drama</p> <p><a href="comedy.html">Comedy</a></p> </td>
+    <td><a href="paranatural.html">Paranatural</a></td>
+    <td><a href="Zack Morrison.html">Zack Morrison</a></td>
   </tr>
 
   <tr>
-    <th ><a href="comedy.html">Comedy</a></th>
-    <th >Focuses on humor.</th>
-    <th ><p>Serialized</p> <p><a href="gag-a-day.html">Gag-a-Day</a></p></th>
-    <th ><a href="paranatural.html">Paranatural</a></th>
-    <th ><a href="Zack Morrison.html">Zack Morrison</a></th>
+    <td><a href="comedy.html">Comedy</a></td>
+    <td>Focuses on humor.</td>
+    <td><p>Serialized</p> <p><a href="gag-a-day.html">Gag-a-Day</a></p></td>
+    <td><a href="paranatural.html">Paranatural</a></td>
+    <td><a href="Zack Morrison.html">Zack Morrison</a></td>
   </tr>
 
   <tr>
-    <th ><a href="fantasy.html">Fantasy</a></th>
-    <th >Deals with otherworldly themes.</th>
-    <th >Almost Any</th>
-    <th ><a href="paranatural.html">Paranatural</a></th>
-    <th ><a href="Zack Morrison.html">Zack Morrison</a></th>
+    <td><a href="fantasy.html">Fantasy</a></td>
+    <td>Deals with otherworldly themes.</td>
+    <td>Almost Any</td>
+    <td><a href="paranatural.html">Paranatural</a></td>
+    <td><a href="Zack Morrison.html">Zack Morrison</a></td>
   </tr>
 
   <tr>
-    <th ><a href="slice of life.html">Slice of Life</a></th>
-    <th >Focuses on everyday life.</th>
-    <th ><p>Sci-Fi</p> <p><a href="fantasy.html">Fantasy</a></p></th>
-    <th ><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></th>
-    <th ><a href="Tim Buckley.html">Tim Buckley</a></th>
+    <td><a href="slice of life.html">Slice of Life</a></td>
+    <td>Focuses on everyday life.</td>
+    <td><p>Sci-Fi</p> <p><a href="fantasy.html">Fantasy</a></p></td>
+    <td><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></td>
+    <td><a href="Tim Buckley.html">Tim Buckley</a></td>
   </tr>
 
   <tr>
-    <th ><a href="gag-a-day.html">Gag-a-Day</a></th>
-    <th >Self-contained jokes.</th>
-    <th ><a href="comedy.html">Comedy</a></th>
-    <th ><p><a href="awkward zombie.html">Awkward Zombie</a></p>
-<p><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></p></th>
-    <th ><p><a href="Katie Tiedrich.html">Katie Tiedrich</a></p>
-<p><a href="Tim Buckley.html">Tim Buckley</a></p></th>
+    <td><a href="gag-a-day.html">Gag-a-Day</a></td>
+    <td>Self-contained jokes.</td>
+    <td><a href="comedy.html">Comedy</a></td>
+    <td><p><a href="awkward zombie.html">Awkward Zombie</a></p>
+<p><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></p></td>
+    <td><p><a href="Katie Tiedrich.html">Katie Tiedrich</a></p>
+<p><a href="Tim Buckley.html">Tim Buckley</a></p></td>
   </tr>
 
   <tr>
-    <th ><a href="parody.html">Parody</a></th>
-    <th >Spoof from other source material.</th>
-    <th ><a href="comedy.html">Comedy</a></th>
-    <th ><p><a href="awkward zombie.html">Awkward Zombie</a></p>
-<p><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></p></th>
-    <th ><p><a href="Katie Tiedrich.html">Katie Tiedrich</a></p>
-<p><a href="Tim Buckley.html">Tim Buckley</a></p></th>
+    <td><a href="parody.html">Parody</a></td>
+    <td>Spoof from other source material.</td>
+    <td><a href="comedy.html">Comedy</a></td>
+    <td><p><a href="awkward zombie.html">Awkward Zombie</a></p>
+<p><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></p></td>
+    <td><p><a href="Katie Tiedrich.html">Katie Tiedrich</a></p>
+<p><a href="Tim Buckley.html">Tim Buckley</a></p></td>
   </tr>
 </table>
 </center>
@@ -108,6 +108,45 @@ else
 {
 window.location = myarray[mynum];
 }
+}
+</script>
+
+<script>
+function sortGenres(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("genresTable");
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
 }
 </script>
 
