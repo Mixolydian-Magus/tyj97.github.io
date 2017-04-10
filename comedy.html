@@ -2,28 +2,37 @@
 <html>
 <head>
 <title>Comedy</title>
+<link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
 
-<nav>
-<table style="width:100%">
-  <tr>
-    <th style="font-family:helvetica;"> <a href="index.html">Home</a></th>
-    <th style="font-family:helvetica;"> <a href="comics.html">Comics</a></th>
-    <th style="font-family:helvetica;"> <a href="authors.html">Authors</a></th>
-    <th style="font-family:helvetica;"> <a href="genres.html">Genres</a></th>
-    <th style="font-family:helvetica;"> <a href="about.html">About</a></th>
-  </tr>
-</table>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">WCDB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="comics.html">Comics</a></li>
+        <li><a href="authors.html">Authors</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <button onClick="randomLoad()" class="btn btn-default">Random Page</button>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
-<h1 style="font-family:helvetica;">Comedy</h1>
-<p style="font-family:helvetica;">Comedy is a genre of webcomic that makes humor the main focus. Each strip typically ends in a "punchline" designed to be comedic in some way. Comedy comics can be done in <a href="gag-a-day.html">gag-a-day</a> style or serialized. Very few comics are purely comedic; most comics exist somewhere on a spectrum of comedy to drama.</p>
+<div class="page-header">
+<h1 >Comedy</h1></div>
+<p >Comedy is a genre of webcomic that makes humor the main focus. Each strip typically ends in a "punchline" designed to be comedic in some way. Comedy comics can be done in <a href="gag-a-day.html">gag-a-day</a> style or serialized. Very few comics are purely comedic; most comics exist somewhere on a spectrum of comedy to drama.</p>
 
-<h2 style="font-family:helvetica;">Examples of comedy comics</h2>
-<p style="font-family:helvetica;"><a href="Awkward Zombie.html"><i>Awkward Zombie</i></a> by <a href="Katie Tiedrich.html">Katie Tiedrich</a></p>
-<p style="font-family:helvetica;"><a href="Ctrl+Alt+Del.html"><i>Ctrl+Alt+Del</i></a> by <a href="Tim Buckley.html">Tim Buckley</a></p>
-<p style="font-family:helvetica;"><a href="paranatural.html"><i>Paranatural</i></a> by <a href="Zack Morrison.html">Zack Morrison</a></p>
+<h2 >Examples of comedy comics</h2>
+<p ><a href="Awkward Zombie.html"><i>Awkward Zombie</i></a> by <a href="Katie Tiedrich.html">Katie Tiedrich</a></p>
+<p ><a href="Ctrl+Alt+Del.html"><i>Ctrl+Alt+Del</i></a> by <a href="Tim Buckley.html">Tim Buckley</a></p>
+<p ><a href="paranatural.html"><i>Paranatural</i></a> by <a href="Zack Morrison.html">Zack Morrison</a></p>
 
 <script>
 function randomLoad()
@@ -43,8 +52,6 @@ window.location = myarray[mynum];
 }
 }
 </script>
-
-<button name="random" value="Random Page" onClick="randomLoad()">Random Page</button></center>
 
 </body>
 </html>
