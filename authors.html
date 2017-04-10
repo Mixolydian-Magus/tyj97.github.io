@@ -27,48 +27,48 @@
 
 <h1 >Authors</h1>
 <center>
-<table border="1" style="width:99%">
+<table border="1" style="width:99%" id="authorsTable">
 
   <tr>
-    <th >Name</th>
-    <th >Comics Written</th>
-    <th >Genres Worked In</th>
-    <th >Years Active</th>
-    <th >Influences</th>
+    <th onclick="sortAuthors(0)">Name</th>
+    <th onclick="sortAuthors(1)">Comics Written</th>
+    <th onclick="sortAuthors(2)">Genres Worked In</th>
+    <th onclick="sortAuthors(3)">Years Active</th>
+    <th onclick="sortAuthors(4)">Influences</th>
   </tr>
 
   <tr>
-    <th ><a href="Katie Tiedrich.html">Katie Tiedrich</a></th>
-    <th ><a href="awkward zombie.html">Awkward Zombie</a></th>
-    <th >
+    <td><a href="Katie Tiedrich.html">Katie Tiedrich</a></td>
+    <td><a href="awkward zombie.html">Awkward Zombie</a></td>
+    <td>
 <p><a href="gag-a-day.html">Gag-a-Day</a></p>
 <p><a href="comedy.html">Comedy</a></p>
-<p><a href="parody.html">Parody</a></p></th>
-    <th >2006-2017</th>
-    <th >Video Games, Personal Life</th>
+<p><a href="parody.html">Parody</a></p></td>
+    <td>2006-2017</td>
+    <td>Video Games, Personal Life</td>
   </tr>
 
   <tr>
-    <th ><a href="Tim Buckley.html">Tim Buckley</a></th>
-    <th ><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></th>
-    <th >
+    <td><a href="Tim Buckley.html">Tim Buckley</a></td>
+    <td><a href="Ctrl+Alt+Del.html">CTRL+ALT+DEL</a></td>
+    <td>
 <p><a href="comedy.html">Comedy</a></p>
 <p><a href="gag-a-day.html">Gag-a-Day</a></p>
 <p><a href="slice of life.html">Slice of Life</a></p>
-<p><a href="parody.html">Parody</a></p></th>
-    <th >2002-2017</th>
-    <th ><i>Penny Arcade</i>, Video Games</th>
+<p><a href="parody.html">Parody</a></p></td>
+    <td>2002-2017</td>
+    <td><i>Penny Arcade</i>, Video Games</td>
   </tr>
 
   <tr>
-    <th ><a href="Zack Morrison.html">Zack Morrison</a></th>
-    <th ><a href="paranatural.html">Paranatural</a></th>
-    <th >
+    <td><a href="Zack Morrison.html">Zack Morrison</a></td>
+    <td><a href="paranatural.html">Paranatural</a></td>
+    <td>
 <p><a href="comedy.html">Comedy</a></p>
 <p><a href="fantasy.html">Fantasy</a></p>
-<p><a href="action.html">Action</a></p></th>
-    <th >2011-2017</th>
-    <th >Gunnerkrigg Court, among others</th>
+<p><a href="action.html">Action</a></p></td>
+    <td>2011-2017</td>
+    <td>Gunnerkrigg Court, among others</td>
   </tr>
 
 
@@ -91,6 +91,45 @@ else
 {
 window.location = myarray[mynum];
 }
+}
+</script>
+
+<script>
+function sortAuthors(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("authorsTable");
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
 }
 </script>
 
