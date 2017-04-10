@@ -2,19 +2,27 @@
 <html>
 <head>
 <title>Genres</title>
+<link rel="stylesheet" href="bootstrap.css">
 </head>
 <body style="background-color:LightSlateGrey">
 
-<nav>
-<table style="width:100%">
-  <tr>
-    <th style="font-family:helvetica;"> <a href="index.html">Home</a></th>
-    <th style="font-family:helvetica;"> <a href="comics.html">Comics</a></th>
-    <th style="font-family:helvetica;"> <a href="authors.html">Authors</a></th>
-    <th style="font-family:helvetica;"> <a href="genres.html">Genres</a></th>
-    <th style="font-family:helvetica;"> <a href="about.html">About</a></th>
-  </tr>
-</table>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">WCDB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="comics.html">Comics</a></li>
+        <li><a href="authors.html">Authors</a></li>
+        <li class="active"><a href="genres.html">Genres<span class="sr-only">(current)</span></a></li>
+        <li><button onClick="randomLoad()" class="btn btn-default">Random Page</button></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
 <h1 style="font-family:helvetica;">Genres</h1>
@@ -81,5 +89,23 @@
 <p><a href="Tim Buckley.html">Tim Buckley</a></p></th>
   </tr>
 </table>
+<script>
+function randomLoad()
+{
+var myarray = new Array("action.html", "awkward zombie.html", "comedy.html", "Ctrl+Alt+Del.html", "fantasy.html", "gag-a-day.html", "Katie Tiedrich.html", "paranatural.html", "parody.html", "slice of life.html", "Tim Buckley.html", "Zack Morrison.html");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
 </body>
 </html>

@@ -2,19 +2,27 @@
 <html>
 <head>
 <title>Awkward Zombie</title>
+<link rel="stylesheet" href="bootstrap.css">
 </head>
 <body style="background-color:rgb(255,204,51)">
 
-<nav>
-<table style="width:100%">
-  <tr>
-    <th style="font-family:helvetica;"> <a href="index.html">Home</a></th>
-    <th style="font-family:helvetica;"> <a href="comics.html">Comics</a></th>
-    <th style="font-family:helvetica;"> <a href="authors.html">Authors</a></th>
-    <th style="font-family:helvetica;"> <a href="genres.html">Genres</a></th>
-    <th style="font-family:helvetica;"> <a href="about.html">About</a></th>
-  </tr>
-</table>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">WCDB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="comics.html">Comics</a></li>
+        <li><a href="authors.html">Authors</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><button onClick="randomLoad()" class="btn btn-default">Random Page</button></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
 <h1 style="font-family:helvetica;">Awkward Zombie</h1>
@@ -51,8 +59,6 @@ window.location = myarray[mynum];
 }
 }
 </script>
-
-<button name="random" value="Random Page" onClick="randomLoad()">Random Page</button></center>
 
 </body>
 </html>
