@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index">WCDB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href={{ url_for('index') }}>Home</a></li>
+        <li><a href={{ url_for('about') }}>About</a></li>
+        <li><a href={{ url_for('comics') }}>Comics</a></li>
+        <li><a href={{ url_for('authors') }}>Authors</a></li>
+        <li><a href={{ url_for('genres') }}>Genres</a></li>
+        <li><button onClick="randomLoad()" class="btn btn-default">Random Page</button></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="page-header">
+<center><h1>Meet the Slam Dunk Team</h1></center>
+</div>
+
+<table style="width:100%">
+
+<tr>
+<th style="font-size:48"><center>Tyler James</center></th>
+<th style="font-size:48"><center>Evan Noe</center></th>
+</tr>
+
+<tr>
+<th><center><img src="static/images/tyler.jpg" alt="Tyler_Image" style="width:50%;height:25%;"></center></th>
+<th><center><img src="static/images/evan.jpg" alt="Evan_Image" style="width:50%;height:25%;"></center></th>
+</tr>
+
+<tr>
+<tb><center>Tyler James is a 20 year old film major from Dallas. He aspires to write storylines for video games - at least, when he's not too busy playing them. His roles include:
+<u1>
+<li>Team Lead</li>
+<li>Research Jockey</li>
+<li>Wordsmith</li>
+</u1></center>
+</tb>
+<tb><center>Evan Noe is a 21 year old economics major, also from Dallas. He is an economics major, but prefers his minor in computer science. His roles include:
+<u1>
+<li>Lead Coder</li>
+<li>Style Expert</li>
+<li>Craft Services</li>
+</u1></center>
+</tb>
+</tr>
+</table>
+
+
+<center><h2>Stats:</h2>
+<p>Total commits: 37 (including initial commit)</p>
+<p>Total issues: 45</p>
+<p><a href="https://github.com/tyj97/tyj97.github.io/issues">Issue Tracker</a></p>
+<p><a href="https://github.com/tyj97/tyj97.github.io">Repository</a></p>
+<p><a href="https://github.com/tyj97/tyj97.github.io/wiki/Technical-Report">Technical Report</a></p>
+<p><a href="https://speakerdeck.com/tyj97/untitled-presentation">Presentation</a><p></center>
+
+<script>
+function randomLoad()
+{
+var myarray = new Array("action", "Awkward_Zombie", "comedy", "CtrlAltDel", "fantasy", "gagaday", "Katie_Tiedrich", "Paranatural", "parody", "slice_of_life", "Tim_Buckley", "Zack_Morrison");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+</body>
+</html>
+
+
+

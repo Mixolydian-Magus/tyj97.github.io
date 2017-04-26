@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paranatural</title>
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index">WCDB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href={{ url_for('index') }}>Home</a></li>
+        <li><a href={{ url_for('about') }}>About</a></li>
+        <li><a href={{ url_for('comics') }}>Comics</a></li>
+        <li><a href={{ url_for('authors') }}>Authors</a></li>
+        <li><a href={{ url_for('genres') }}>Genres</a></li>
+        <li><button onClick="randomLoad()" class="btn btn-default">Random Page</button></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="page-header">
+<h1>Paranatural</h1></div>
+<img src="static/images/paranaturalmax.png" alt="Paranatural protagonist Max Puckett" style="width:900;height:600;">
+<p><a href="http://www.paranatural.net/"><i>Paranatural</i></a> is a <a href={{ url_for('comedy') }}>comedy</a>/<a href={{ url_for('action') }}>action</a> comic with <a href={{ url_for('fantasy') }}>fantasy</a> elements written by <a href={{ url_for('Zack_Morrison') }}>Zack Morrison</a>. The comic follows middle schooler Maxwell Puckett as he and his superpowered school club fight evil spirits and investigate paranormal activities in the town of Mayview. It updates on Tuesdays and Fridays.</p>
+
+<h2>Main Cast</h2>
+<p>Maxwell Puckett: AKA Max. The protagonist, Max is new to Mayview and to the world of the paranormal. Hobbies include parkour and sarcasm. Wields a baseball bat. His spectral energy is black.</p>
+<p>Richard Spender: The faculty advisor for the Activity Club. Good to the kids and generally a huge dork, but harbors a mysterious past and connections to a shadowy organization. Wields a pair of sunglasses. His spectral energy is yellow.</p>
+<p>Isabel Guerra: A longtime member of the Activity Club and granddaughter of the instructor of a respected spectral energy dojo. Generally the most aware of what's going on at any given time. Wields a book, and later an umbrella. Her spectral energy is red.</p>
+<p>Edward Burger: AKA Ed. A quirky member of the Activity Club and Isabel's best friend. Wields a paintbrush. His spectral energy is lime green.</p>
+<p>Isaac O'Connor: The newest member of the Activity Club other than Max. Prone to mood swings and a bit paranoid, Isaac is kept out of the loop in the Activity Club for undisclosed reasons, and harbors resentment because of it. A medium for a weather-controlling spirit. His spectral energy is light blue.</p>
+
+<h2>Plot</h2>
+<p>The comic is divided into five chapters so far. Chapter 1 details Max's arrival in the town of Mayview and his introduction to the Activity Club, a group of students dedicated to dealing with the many spirits that dwell there. Chapter 2 follows Max through a night in his new home, where he must fend off a devastating spirit attack and learns of the existence of a spirit withhin his paranormal weapon, or "tool". Chapter 3 details Max's trip to school the next day, involving a run-in with the local bullies and a secret spectral shortcut. Chapter 4 follows the Activity Club as they meet with their teacher's mysterious associates and have a run-in with a some powerful spirits. Finally, Chapter 5 deals with a mysterious body-snatching spirit's infiltration of Mayview Middle School and the Activity Club's attempts to defeat it.</p>
+
+<h2>History</h2>
+<p>The first page was posted on May 1st, 2011. The comic initially used a more rough-ink look before gradually evolving to a smoother style over time. The first 8 pages were black and white with minor color splashes in the backgrounds before page 9 made the permanent jump to full color. Updates are delayed by 1-2 weeks on a semi-frequent basis, but the comic has never experienced a long hiatus.</p>
+
+<h2>Sources</h2>
+<p>All info taken from http://www.paranatural.net/</p>
+
+<script>
+function randomLoad()
+{
+var myarray = new Array("action", "Awkward_Zombie", "comedy", "CtrlAltDel", "fantasy", "gagaday", "Katie_Tiedrich", "Paranatural", "parody", "slice_of_life", "Tim_Buckley", "Zack_Morrison");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+</body>
+</html>

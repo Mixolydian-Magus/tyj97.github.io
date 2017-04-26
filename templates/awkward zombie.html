@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Awkward Zombie</title>
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index">WCDB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href={{ url_for('index') }}>Home</a></li>
+        <li><a href={{ url_for('about') }}>About</a></li>
+        <li><a href={{ url_for('comics') }}>Comics</a></li>
+        <li><a href={{ url_for('authors') }}>Authors</a></li>
+        <li><a href={{ url_for('genres') }}>Genres</a></li>
+        <li><button onClick="randomLoad()" class="btn btn-default">Random Page</button></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="page-header">
+
+<h1>Awkward Zombie</h1></div>
+
+<img src="static/images/awkwardzombie.png" alt="Awkward Zombie Logo" style="width:900;height:600;">
+
+<p><a href="http://www.awkwardzombie.com/"><i>Awkward Zombie</i></a> is a <a href={{ url_for('gagaday') }}>gag-a-day</a> video game <a href={{ url_for('parody') }}>parody</a> comic illustrated by <a href={{ url_for('Katie_Tiedrich') }}>Katie Tiedrich</a>, with writing split between Tiedrich and her husband, Norrin. Each comic is a self-contained gag, typically poking fun at absurd mechanics or premises found in video games. The comic updates every Monday.</p>
+
+<h2>Recurring Games</h2>
+<p>The comic covers a wide variety of games; however, certain franchises receive more attention than others. Games and franchises which receive more coverage include Super Smash Bros., Fire Emblem, Ace Attorney, Metal Gear Solid, and Pokemon.</p>
+
+<h2>Hourly Comics Day</h2>
+<p>Each year, Tiedrich posts an Hourly Comics Day strip on the site. The strip is rarely video game related and instead tends to focus on Tiedrich's personal life.</p>
+
+<h2>History</h2>
+<p>The first page was posted on September 20, 2006 and has updated once weekly ever since. In 2015, it was cited by PC Gamer Magazine as one of the "best webcomics of 2015".</p>
+
+<h2>Sources</h2>
+<p>All info pulled from http://www.awkwardzombie.com/</p>
+
+<script>
+function randomLoad()
+{
+var myarray = new Array("action", "Awkward_Zombie", "comedy", "CtrlAltDel", "fantasy", "gagaday", "Katie_Tiedrich", "Paranatural", "parody", "slice_of_life", "Tim_Buckley", "Zack_Morrison");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+</body>
+</html>

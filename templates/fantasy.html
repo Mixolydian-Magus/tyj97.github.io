@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fantasy</title>
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index">WCDB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href={{ url_for('index') }}>Home</a></li>
+        <li><a href={{ url_for('about') }}>About</a></li>
+        <li><a href={{ url_for('comics') }}>Comics</a></li>
+        <li><a href={{ url_for('authors') }}>Authors</a></li>
+        <li><a href={{ url_for('genres') }}>Genres</a></li>
+        <li><button onClick="randomLoad()" class="btn btn-default">Random Page</button></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="page-header">
+<h1>Fantasy</h1></div>
+<p>Fantasy is a genre of webcomic that typically refers to the setting - fantasy comics often occur in medieval or alternate reality settings, though this is not a requirement. Fantasy comics also tend to include mystical or magical elements - almost all involve some sort of magic system. Fantasy is very rarely the sole genre of a comic and is a very versatile genre, able to overlap with almost any other genre.</p>
+
+<h2>Examples of fantasy comics</h2>
+<p><a href={{ url_for('Paranatural') }}><i>Paranatural</i></a> by <a href={{ url_for('Zack_Morrison') }}>Zack Morrison</a></p>
+
+<script>
+function randomLoad()
+{
+var myarray = new Array("action", "Awkward_Zombie", "comedy", "CtrlAltDel", "fantasy", "gagaday", "Katie_Tiedrich", "Paranatural", "parody", "slice_of_life", "Tim_Buckley", "Zack_Morrison");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+</body>
+</html>

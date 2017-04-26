@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Authors</title>
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index">WCDB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href={{ url_for('index') }}>Home</a></li>
+        <li><a href={{ url_for('about') }}>About</a></li>
+        <li><a href={{ url_for('comics') }}>Comics</a></li>
+        <li><a href={{ url_for('authors') }}>Authors</a></li>
+        <li><a href={{ url_for('genres') }}>Genres</a></li>
+        <li><button onClick="randomLoad()" class="btn btn-default">Random Page</button></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<h1 >Authors</h1>
+<center>
+<table border="1" style="width:99%" id="authorsTable">
+
+  <tr>
+    <th onclick="sortAuthors(0)">Name</th>
+    <th onclick="sortAuthors(1)">Comics Written</th>
+    <th onclick="sortAuthors(2)">Genres Worked In</th>
+    <th onclick="sortAuthors(3)">Years Active</th>
+    <th onclick="sortAuthors(4)">Influences</th>
+  </tr>
+
+  <tr>
+    <td><a href={{ url_for('Katie_Tiedrich') }}>Katie Tiedrich</a></td>
+    <td><a href={{ url_for('Awkward_Zombie') }}>Awkward Zombie</a></td>
+    <td>
+<p><a href={{ url_for('gagaday') }}>Gag-a-Day</a></p>
+<p><a href={{ url_for('comedy') }}>Comedy</a></p>
+<p><a href={{ url_for('parody') }}>Parody</a></p></td>
+    <td>2006-2017</td>
+    <td>Video Games, Personal Life</td>
+  </tr>
+
+  <tr>
+    <td><a href={{ url_for('Tim_Buckley') }}>Tim Buckley</a></td>
+    <td><a href={{ url_for('CtrlAltDel') }}>Ctrl+Alt+Del</a></td>
+    <td>
+<p><a href={{ url_for('comedy') }}>Comedy</a></p>
+<p><a href={{ url_for('gagaday') }}>Gag-a-Day</a></p>
+<p><a href={{ url_for('slice_of_life') }}>Slice of Life</a></p>
+<p><a href={{ url_for('parody') }}>Parody</a></p></td>
+    <td>2002-2017</td>
+    <td><i>Penny Arcade</i>, Video Games</td>
+  </tr>
+
+  <tr>
+    <td><a href={{ url_for('Zack_Morrison') }}>Zack Morrison</a></td>
+    <td><a href={{ url_for('Paranatural') }}>Paranatural</a></td>
+    <td>
+<p><a href={{ url_for('comedy') }}>Comedy</a></p>
+<p><a href={{ url_for('fantasy') }}>Fantasy</a></p>
+<p><a href={{ url_for('action') }}>Action</a></p></td>
+    <td>2011-2017</td>
+    <td>Gunnerkrigg Court, among others</td>
+  </tr>
+
+
+</table>
+</center>
+
+<script>
+function randomLoad()
+{
+var myarray = new Array("action", "Awkward_Zombie", "comedy", "CtrlAltDel", "fantasy", "gagaday", "Katie_Tiedrich", "Paranatural", "parody", "slice_of_life", "Tim_Buckley", "Zack_Morrison");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+<script>
+function sortAuthors(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("authorsTable");
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+<center>
+  <nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href={{ url_for('comics') }} aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href={{ url_for('comics') }}>1</a></li>
+    <li class="active"><a href="#">2 <span class="sr-only">(current)</span></a></li>
+    <li><a href={{ url_for('genres') }}>3</a></li>
+    <li>
+      <a href={{ url_for('genres') }} aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</center>
+
+</body>
+</html>

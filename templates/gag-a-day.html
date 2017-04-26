@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gag-a-day</title>
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index">WCDB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href={{ url_for('index') }}>Home</a></li>
+        <li><a href={{ url_for('about') }}>About</a></li>
+        <li><a href={{ url_for('comics') }}>Comics</a></li>
+        <li><a href={{ url_for('authors') }}>Authors</a></li>
+        <li><a href={{ url_for('genres') }}>Genres</a></li>
+        <li><button onClick="randomLoad()" class="btn btn-default">Random Page</button></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="page-header">
+<h1>Gag-a-day</h1></div>
+<p>The gag-a-day genre is used to define comics which, rather than utilizing a single serial storyline or overarching continuity, relies on self-contained jokes occuring on a day-to-day basis. As the name implies, almost all gag-a-day comics are also <a href={{ url_for('comedy') }}>comedies</a>.</p>
+
+<h2>Examples of gag-a-day comics</h2>
+<p><a href={{ url_for('Awkward_Zombie') }}><i>Awkward Zombie</i></a> by <a href={{ url_for('Katie_Tiedrich') }}>Katie Tiedrich</a></p>
+<p><a href={{ url_for('CtrlAltDel') }}><i>Ctrl+Alt+Delete</i></a> by <a href={{ url_for('Tim_Buckley') }}>Tim Buckley</a> (half-example; the comic is split between a continuing storyline and individual unrelated gag strips.</p>
+
+<script>
+function randomLoad()
+{
+var myarray = new Array("action", "Awkward_Zombie", "comedy", "CtrlAltDel", "fantasy", "gagaday", "Katie_Tiedrich", "Paranatural", "parody", "slice_of_life", "Tim_Buckley", "Zack_Morrison");
+var mynum = Math.floor(Math.random() * 12);
+var location = window.location;
+
+if (location == myarray[mynum])
+{
+randomLoad();
+}
+
+else
+{
+window.location = myarray[mynum];
+}
+}
+</script>
+
+</body>
+</html>
